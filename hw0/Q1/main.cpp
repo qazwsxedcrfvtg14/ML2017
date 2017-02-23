@@ -28,14 +28,14 @@ vector<string>split(string s,string cut){
         }
     return ve;
     }
-int StrToInt(string x){
+long long int StrToInt(string x){
     stringstream str;
-    int s;
+    long long int s;
     str<<x;
     str>>s;
     return s;
     }
-vector<vector<int>>a,b,c;
+vector<vector<long long int>>a,b,c;
 int main(int argc,char** argv){
     string fa,fb;
     if(argv[1]) fa=argv[1];
@@ -53,7 +53,7 @@ int main(int argc,char** argv){
         }
     for(int i=0;getline(fin,s)&&s!="";i++){
         auto v=split(s,",");
-        a.push_back(vector<int>());
+        a.push_back(vector<long long int>());
         for(auto &x:v)
             a.back().push_back(StrToInt(x));
         }
@@ -65,7 +65,7 @@ int main(int argc,char** argv){
         }
     for(int i=0;getline(fin,s)&&s!="";i++){
         auto v=split(s,",");
-        b.push_back(vector<int>());
+        b.push_back(vector<long long int>());
         for(auto &x:v)
             b.back().push_back(StrToInt(x));
         }
@@ -74,7 +74,7 @@ int main(int argc,char** argv){
         fprintf(stderr,"Matrix is not multipliable!\n");
         exit(0);
         }
-    vector<int>ans;
+    vector<long long int>ans;
     for(unsigned int i=0;i<a.size();i++){
         //c.push_back(vector<int>());
         for(unsigned int j=0;j<b[0].size();j++){
@@ -87,7 +87,7 @@ int main(int argc,char** argv){
             }
         }
     sort(ans.begin(),ans.end());
-    for(int x:ans)
-        printf("%d\n",x);
+    for(long long int x:ans)
+        printf("%lld\n",x);
     return 0;
     }
