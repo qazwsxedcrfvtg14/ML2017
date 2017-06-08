@@ -1,0 +1,1 @@
+python2 hw6.py $1 $2
