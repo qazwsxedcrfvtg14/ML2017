@@ -2,7 +2,6 @@
 # 1.41145
 import pandas as pd
 import numpy as np
-from IPython import embed
 def load_data( tpath):
 
     test_data = pd.read_csv(tpath)
